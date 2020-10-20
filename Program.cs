@@ -8,27 +8,25 @@ namespace GiaiPhuongTrinhBacNhat
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            double a, b;
-            Console.WriteLine("Phương trình aX + b = 0");
+            Console.WriteLine("Phương trình bậc nhất aX + b = 0");
             Console.Write("Xin hãy nhập giá trị a: ");
-            a = double.Parse(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
             Console.Write("Xin hãy nhập giá trị b: ");
-            b = double.Parse(Console.ReadLine());
-            if (a != 0 && b != 0)
+            double b = double.Parse(Console.ReadLine());
+            if (a == 0)
             {
-                Console.WriteLine("Nghiệm của phương trình: X = " + -b / a);
-            }
-            else if (a != 0 && b == 0)
-            {
-                Console.WriteLine("Phương trình vô nghiệm!");
-            }
-            else if (a == 0 && b != 0)
-            {
-                Console.WriteLine("Nghiệm của phương trình: X = " + -b);
+                if (b == 0)
+                {
+                    Console.WriteLine("Phương Trình Có Vô Số Nghiệm!");
+                }
+                else
+                {
+                    Console.WriteLine("Phương Trình Vô Nghiệm!");
+                }
             }
             else
             {
-                Console.WriteLine("X có vô số nghiệm!");
+                Console.WriteLine("Phương Trình Có Nghiệm X = {0}", -b / a);
             }
         }
     }
